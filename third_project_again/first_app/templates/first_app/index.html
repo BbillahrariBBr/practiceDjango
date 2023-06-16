@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>We are inside First App</h1>
-    <h1>Author Name: {{author}}</h1>
+    <h1>Author Name: {{name}}</h1>
     <!-- {% if age >= 18 %}
     <p>You can get lisences</p>
     {% else %}
@@ -24,7 +24,7 @@
     {% endif %} -->
 
     <!-- for loop -->
-    <table border="1" width="500">
+    <!-- <table border="1" width="500">
         <tr>
             <th>Id</th>
             <th>Course Name</th>
@@ -37,6 +37,30 @@
             <td>{{i.teacher}}</td> 
         </tr>
         {% endfor %}
-    </table>
+    </table> -->
+
+
+    <!-- Filters in DTL -->
+
+   
+    <!-- add value -->
+    <h1>{{marks | add:"2"}}</h1>
+    <!-- Divisible Check -->
+    <h1>{{marks | divisibleby:"2"}}</h1>
+    <!-- Length -->
+    <h1>{{name | length}}</h1>
+    <!-- Word Count -->
+    <h1>{{name | wordcount}}</h1>
+    <!-- Truncate Words -->
+    <h1>{{blog | truncatewords:5 }}</h1>
+    <h1>{{blog | truncatechars:15 }}</h1>
+    <!-- Make List -->
+    <h1>{{name | make_list}}</h1>
+    <!-- upperCase -->
+    <h1>{{name | upper}}</h1>
+    <!-- lower case -->
+    <h1>{{name | lower}}</h1>
+    <!-- join -->
+    <h1>{{lst | join:','}}</h1>
 </body>
 </html>
