@@ -1,12 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/first.css' %}">
 </head>
 <body>
    <h1>This is my first ever template in django</h1> 
    <a href="https://www.youtube.com/watch?v=4mktIk2GfC8&t=3s">অত্যন্ত মায়াবী কণ্ঠে তিলাওয়াত সূরা কাহফ</a>
+   <img src="{% static 'images/image1.jpg' %}" alt="man1">
+   {% static 'images/image2.jpg'  as man2 %} 
+   <img src="{{man2}}" alt="man1">
+
+   <script src="{%static 'js/index.js'%}"></script>
 </body>
 </html>
