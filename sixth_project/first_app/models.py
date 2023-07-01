@@ -8,5 +8,5 @@ class Student(models.Model):
     fathers_name = models.TextField(default="Rahim")
     
     def __str__(self):
-       return self.name
+       return  f"Roll: {self.roll} - {self.name }"
    
