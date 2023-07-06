@@ -33,6 +33,15 @@ class TeacherInfoModel(CommonInfoClass):
     salary = models.IntegerField()
     
     
+  # 2. multi-table inheritance
+class EmployeeModels(models.Model):
+    name = models.CharField(max_length=40)
+    city = models.CharField(max_length=40)
+    designation = models.CharField(max_length=30)
+    
+class ManagerModels(EmployeeModels):
+    take_interview = models.BooleanField()
+    hiring = models.BooleanField()
     
     
     
