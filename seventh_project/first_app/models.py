@@ -43,5 +43,18 @@ class ManagerModels(EmployeeModels):
     take_interview = models.BooleanField()
     hiring = models.BooleanField()
     
+
+ # 3. proxy model
+ 
+class Friend(models.Model): #amar frnd class a ache
+    school = models.CharField(max_length=40)
+    section = models.CharField(max_length=40)
+    hw = models.CharField(max_length=40)
+    attendence = models.BooleanField()
+
+class Me(Friend): # ami j aj class a nai
+    class Meta:
+        proxy = True
+        ordering = ['id']
     
     
